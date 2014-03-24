@@ -142,16 +142,5 @@ section#projects {
     padding-bottom: 15px;
   }
 
-section#instagram {
-  background-color: #444;
-  padding: 0;
-}
-
-  section#instagram img {
-    height: 395px;
-    width: 395px;
-    display: inline-block;
-  }
-
 section#contact {
 }

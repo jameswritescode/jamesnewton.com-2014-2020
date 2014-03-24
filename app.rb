@@ -25,14 +25,6 @@ def get_last_post
   HTTParty.get('http://blog.jamesnewton.com/posts.json').first
 end
 
-def get_last_two_instagram
-  config = YAML.load_file('config.yml')
-
-  data = HTTParty.get("https://api.instagram.com/v1/users/329461525/media/recent/?client_id=#{config['instagram']['client_id']}")['data'].first(2)
-
-  data.map { |object| object['images']['standard_resolution']['url'] }
-end
-
 get '/' do
   erb :index
 end
