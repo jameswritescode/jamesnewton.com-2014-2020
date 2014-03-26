@@ -18,7 +18,7 @@ section {
 }
 
 strong {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 p {
@@ -27,7 +27,8 @@ p {
 }
 
 div.center {
-  width: 800px;
+  max-width: 800px;
+  width: auto;
   margin: 0 auto;
 }
 
@@ -40,6 +41,7 @@ section#presenting-james-newton {
     font-weight: 900;
     text-transform: uppercase;
     text-align: center;
+    text-shadow: 0 -1px 0 black;
   }
 
   section#presenting-james-newton p {
@@ -55,10 +57,12 @@ section#about {
     color: #ff6161;
     text-decoration: none;
     font-weight: 300;
+    text-shadow: 0 -1px 0 black;
   }
 
   section#about p {
     margin-bottom: 10px;
+    text-shadow: 0 -2px 0 black;
     line-height: 40px;
   }
 
@@ -71,6 +75,7 @@ section#twitter {
   font-family: 'ff-tisa-web-pro', serif;
   font-weight: 400;
   padding: 0;
+  text-shadow: 0 -1px 0 #333;
 }
 
   section#twitter p {
@@ -126,13 +131,16 @@ section#blog {}
       padding-bottom: 15px;
     }
 
+      section#blog article p:last-child {
+        padding: 0;
+      }
+
       section#blog article p:last-child a {
         text-transform: uppercase;
         font-weight: 700;
       }
 
-section#projects {
-}
+section#projects {}
 
   section#projects h1 {
     font-weight: 700;
@@ -142,5 +150,35 @@ section#projects {
     padding-bottom: 15px;
   }
 
+  section#projects a {
+    color: black;
+    font-weight: 400;
+  }
+
+  section#projects p {
+    line-height: 36px;
+    padding-bottom: 15px;
+  }
+
 section#contact {
+  background-color: #444;
+  color: white;
+  text-align: center;
 }
+
+  section#contact a {
+    color: #ff6161;
+    text-decoration: none;
+    font-weight: 300;
+    text-shadow: 0 -1px 0 black;
+  }
+
+  section#contact p {
+    margin-bottom: 10px;
+    text-shadow: 0 -2px 0 black;
+    line-height: 40px;
+  }
+
+    section#contact p:last-child {
+      margin: 0;
+    }
