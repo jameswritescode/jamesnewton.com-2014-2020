@@ -2,6 +2,7 @@ require 'sinatra'
 require 'oauth'
 require 'yaml'
 require 'httparty'
+require 'redcarpet'
 
 def get_last_tweet
   config = YAML.load_file('config.yml')
