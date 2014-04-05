@@ -3,3 +3,5 @@ tmp/*
 config.yml
 vendor
 .bundle
+public
+!public/assets
