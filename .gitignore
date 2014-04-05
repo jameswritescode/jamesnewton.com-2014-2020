@@ -1,3 +1,5 @@
 tmp/*
 !tmp/.keep
 config.yml
+vendor
+.bundle
