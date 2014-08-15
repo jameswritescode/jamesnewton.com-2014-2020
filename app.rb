@@ -22,10 +22,12 @@ def get_last_tweet
   return JSON.parse(request).first
 end
 
-def get_last_post
-  HTTParty.get('http://blog.jamesnewton.com/posts.json').first
-end
-
 get '/' do
-  erb :index
+  post    = HTTParty.get('http://blog.jamesnewton.com/posts.json').first
+  marked  = markdown(post['content']).split
+  content = marked[0...90].join(' ')
+
+  content << '...' if marked.count > 90
+
+  erb :index, locals: { post: post, content: content }
 end

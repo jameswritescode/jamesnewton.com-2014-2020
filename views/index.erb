@@ -39,9 +39,9 @@
                 <h1>The latest from my blog:</h1>
 
                 <article>
-                    <header><%= get_last_post['title'] %></header>
+                    <header><%= post['title'] %></header>
 
-                    <%= markdown(get_last_post['content']).split[0...90].join(' ') %>...
+                    <%= content %>
 
                     <p><a href='http://blog.jamesnewton.com'>Read more</a></p>
                 </article>
