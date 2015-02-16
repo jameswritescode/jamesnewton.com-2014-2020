@@ -19,7 +19,7 @@ def get_last_tweet
 
   request = access_token.request(:get, "https://api.twitter.com/1.1/statuses/user_timeline/jameswritescode.json?count=1").body
 
-  return JSON.parse(request).first
+  JSON.parse(request).first
 end
 
 get '/' do
