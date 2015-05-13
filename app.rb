@@ -3,6 +3,7 @@ require 'oauth'
 require 'yaml'
 require 'httparty'
 require 'redcarpet'
+require 'pry'
 
 def get_last_tweet
   config = YAML.load_file('config.yml')
@@ -23,10 +24,11 @@ def get_last_tweet
 end
 
 get '/' do
-  post    = HTTParty.get('http://blog.jamesnewton.com/posts.json').first
+  post = HTTParty.get('http://blog.jamesnewton.com/posts.json').first
 
-  content = markdown(post['content'].split[0...90].join(' '))
-  content << '...' if post['content'].split.count > 90
+  content = post['content'].split
+  content = content[0...90].push '...' if content.count > 90
+  content = markdown(content.join(' '))
 
   erb :index, locals: { post: post, content: content }
 end
