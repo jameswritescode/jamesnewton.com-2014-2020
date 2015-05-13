@@ -4,6 +4,11 @@ require 'yaml'
 require 'httparty'
 require 'redcarpet'
 require 'pry'
+require 'html_truncator'
+
+class Redcarpet::Render::SiteHTML < Redcarpet::Render::HTML
+  include Redcarpet::Render::SmartyPants
+end
 
 def get_last_tweet
   config = YAML.load_file('config.yml')
@@ -24,11 +29,9 @@ def get_last_tweet
 end
 
 get '/' do
-  post = HTTParty.get('http://blog.jamesnewton.com/posts.json').first
-
-  content = post['content'].split
-  content = content[0...90].push '...' if content.count > 90
-  content = markdown(content.join(' '))
+  post     = HTTParty.get('http://blog.jamesnewton.com/posts.json').first
+  markdown = Redcarpet::Markdown.new(Redcarpet::Render::SiteHTML, fenced_code_blocks: true).render(post['content'])
+  content  = HTML_Truncator.truncate(markdown, 90)
 
   erb :index, locals: { post: post, content: content }
 end
