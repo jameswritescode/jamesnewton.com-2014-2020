@@ -24,10 +24,9 @@ end
 
 get '/' do
   post    = HTTParty.get('http://blog.jamesnewton.com/posts.json').first
-  marked  = markdown(post['content']).split
-  content = marked[0...90].join(' ')
 
-  content << '...' if marked.count > 90
+  content = markdown(post['content'].split[0...90].join(' '))
+  content << '...' if post['content'].split.count > 90
 
   erb :index, locals: { post: post, content: content }
 end
