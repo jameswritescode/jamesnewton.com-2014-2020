@@ -152,10 +152,52 @@ section#projects {}
     font-weight: 400;
   }
 
-  section#projects p {
+  section#projects p.involvement {
     line-height: 36px;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
   }
+
+  section#projects div.projects-row {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+    section#projects div.projects-row a {
+      flex: 1;
+      text-decoration: none;
+    }
+
+  @media only screen and (max-device-width: 500px) {
+    section#projects div.projects-row {
+      display: block;
+    }
+
+      section#projects div.projects-row header {
+        margin-top: 20px;
+      }
+  }
+
+  section#projects article {}
+
+    section#projects article header {
+      font-weight: 700;
+      font-size: 24px;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+      section#projects article header span {
+        border-bottom: 2px solid #444;
+      }
+
+  section#projects div.github-promo {
+    clear: both;
+  }
+
+    section#projects div.github-promo p {
+      line-height: 36px;
+    }
+
 
 section#contact {
   background-color: #444;
