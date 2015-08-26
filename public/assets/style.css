@@ -179,11 +179,15 @@ section#projects {}
 
   section#projects article {}
 
+    section#projects article p {
+      line-height: 36px;
+    }
+
     section#projects article header {
       font-weight: 700;
       font-size: 24px;
       color: #444;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
       section#projects article header span {
