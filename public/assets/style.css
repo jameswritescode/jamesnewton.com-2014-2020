@@ -62,9 +62,10 @@ section#about {
   }
 
   section#about a {
-    color: #ff6161;
+    font-weight: 400;
+    color: #fff;
     text-decoration: none;
-    font-weight: 300;
+    border-bottom: 2px solid #fff;
   }
 
   section#about p {
@@ -120,8 +121,10 @@ section#blog {}
   section#blog article {}
 
     section#blog article a {
-      color: black;
+      color: #444;
       font-weight: 400;
+      border-bottom: 2px solid #444;
+      text-decoration: none;
     }
 
     section#blog article header {
@@ -156,7 +159,7 @@ section#projects {}
   }
 
   section#projects a {
-    color: black;
+    color: #444;
     font-weight: 400;
   }
 
@@ -210,6 +213,11 @@ section#projects {}
       line-height: 36px;
     }
 
+    section#projects div.github-promo a {
+      text-decoration: none;
+      border-bottom: 2px solid #444;
+    }
+
 
 section#contact {
   background-color: #444;
@@ -218,9 +226,10 @@ section#contact {
 }
 
   section#contact a {
-    color: #ff6161;
     text-decoration: none;
     font-weight: 300;
+    border-bottom: 2px solid #fff;
+    color: #fff;
   }
 
   section#contact p {
