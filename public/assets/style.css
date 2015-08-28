@@ -53,6 +53,14 @@ section#about {
   color: white;
 }
 
+  .typed-cursor {
+    display: none;
+  }
+
+  span.typed {
+    font-weight: bold;
+  }
+
   section#about a {
     color: #ff6161;
     text-decoration: none;
