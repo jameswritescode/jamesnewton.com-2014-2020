@@ -4,4 +4,6 @@ config.yml
 vendor
 .bundle
 public
-!public/assets
+.sass-cache
+!public/javascripts
+!public/stylesheets

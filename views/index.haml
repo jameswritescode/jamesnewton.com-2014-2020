@@ -1,0 +1,113 @@
+!!!
+%html
+  %head
+    %meta{ charset: 'utf-8' }
+    %title James Newton
+    %meta{ content: 'IE=edge,chrome=1', 'http-equiv' => 'X-UA-Compatible' }
+    %meta{ content: 'width=device-width, initial-scale=1.0', name: :viewport }
+    %link{ href: '/stylesheets/style.css', media: :screen, rel: :stylesheet }
+
+    %script{ src: 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js' }
+    %script{ src: '/javascripts/typed.min.js' }
+    %script{ src: '/javascripts/script.js' }
+    %script{ src: 'http://use.typekit.net/zaz2bts.js' }
+    :javascript
+      try{Typekit.load();}catch(e){}
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-43832701-1', 'jamesnewton.com');
+      ga('send', 'pageview');
+
+    %body
+      %section#presenting-james-newton
+        %header James Newton
+        %p don't let your dreams be dreams
+
+      %section#about
+        .center
+          %p
+            I'm James Newton,
+            %span.js-typed.typed
+            in the Orlando, FL area.
+
+          %p
+            I work at
+            = succeed ', a' do
+              %a{ href: 'https://codeschool.com' } Code School
+            %a{ href: 'http://www.pluralsight.com' } Pluralsight
+            company.
+
+      %section#blog
+        .center
+          %h1 The latest from my blog
+
+          %article
+            %header= post['title']
+
+            = content
+
+            %p
+              %a{ href: 'http://blog.jamesnewton.com' } Read more
+
+      %section#twitter
+        %a{ href: 'https://twitter.com/jameswritescode', target: :_blank }
+          .center
+            %p== &ldquo;#{get_last_tweet['text']}&rdquo;
+
+            .by
+              @jameswritescode on
+              = DateTime.parse(get_last_tweet['created_at']).strftime('%B %-m, %Y')
+
+      %section#projects
+        .center
+          %h1 Projects
+
+          %p.involvement Here's a few projects I'm involved with.
+
+          .projects-row
+            %a{ href: 'https://whatpulse.org/newton' }
+              %article
+                %header
+                  %span WhatPulse
+
+                %p Statistic tracker for your desktop.
+
+            %a{ href: 'https://about.gitlab.com/core-team/' }
+              %article
+                %header
+                  %span GitLab
+
+                %p Open source software to collaberate on code.
+
+          .projects-row
+            %a{ href: 'https://javascript.com' }
+              %article
+                %header
+                  %span JavaScript.com
+
+                %p A resource for the JavaScript community.
+
+            %a{ href: 'http://dnserv.io' }
+              %article
+                %header
+                  %span DNServ
+
+                %p DNS management and status tracking. In development!
+
+          .github-promo
+            %p
+              Also, check me out on
+              = succeed '!' do
+                %a{ href: 'https://github.com/jameswritescode' } GitHub
+
+      %section#contact
+        .center
+          %p That's me!
+
+          %p
+            If you'd like to reach out, email me at
+            %a{ href: 'mailto:hello@jamesnewton.com' } hello@jamesnewton.com

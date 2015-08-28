@@ -5,6 +5,8 @@ require 'httparty'
 require 'redcarpet'
 require 'pry'
 require 'html_truncator'
+require 'sass/plugin/rack'
+require 'haml'
 
 class Redcarpet::Render::SiteHTML < Redcarpet::Render::HTML
   include Redcarpet::Render::SmartyPants
@@ -33,5 +35,5 @@ get '/' do
   markdown = Redcarpet::Markdown.new(Redcarpet::Render::SiteHTML, fenced_code_blocks: true).render(post['content'])
   content  = HTML_Truncator.truncate(markdown, 90)
 
-  erb :index, locals: { post: post, content: content }
+  haml :index, locals: { post: post, content: content }
 end
