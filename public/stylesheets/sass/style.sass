@@ -1,0 +1,198 @@
+$black: #444
+$red: #ff6161
+$red-hover: #ff5757
+
+html, body, h1
+  padding: 0
+  margin: 0
+  font:
+    family: 'proxima-nova', sans-serif
+    weight: 400
+    style: normal
+
+section, p, header
+  margin: 0
+  padding: 0
+
+section
+  padding:
+    top: 100px
+    bottom: 100px
+
+strong
+  font-weight: 400
+
+p
+  line-height: 36px
+  font:
+    size: 24px
+    weight: 100
+
+div.center
+  max-width: 800px
+  width: auto
+  margin: 0 auto
+
+section#presenting-james-newton
+  color: $black
+
+  header
+    font:
+      size: 72px
+      weight: 900
+    text:
+      transform: uppercase
+      align: center
+      shadow: 0 -1px 0 $black
+
+  p
+    text-align: center
+
+section#about
+  background-color: $black
+  color: #fff
+
+  span.typed-cursor
+    display: none
+
+  span.typed
+    font-weight: bold
+
+  a
+    font-weight: 400
+    color: #fff
+    text-decoration: none
+    border-bottom: 2px solid #fff
+
+  p
+    margin-bottom: 10px
+
+    &:last-child
+      margin: 0
+
+section#blog
+  h1
+    text-transform: uppercase
+    color: $black
+    padding-bottom: 15px
+    font:
+      weight: 700
+      size: 30px
+
+  a
+    color: $black
+    font-weight: 400
+    border-bottom: 2px solid $black
+    text-decoration: none
+
+  header
+    color: $black
+    padding-bottom: 15px
+    font:
+      weight: 700
+      size: 24px
+
+  p
+    padding-bottom: 15px
+
+    &:last-child
+      padding: 0
+
+      a
+        text-transform: uppercase
+        font-weight: 700
+
+section#twitter
+  background-color: $red
+  padding: 0
+  font:
+    family: 'ff-tisa-web-pro', serif
+    weight: 400
+
+  p
+    padding-bottom: 10px
+    text-align: center
+    font-size: 36px
+
+  a
+    display: block
+    text-decoration: none
+    color: $black
+    transition: background-color .5s ease-in-out
+    padding:
+      top: 100px
+      bottom: 100px
+
+    &:hover
+      background-color: $red-hover
+
+  div.by
+    font-size: 30px
+    text-align: center
+
+section#projects
+  h1
+    color: $black
+    text-transform: uppercase
+    padding-bottom: 15px
+    font:
+      weight: 700
+      size: 30px
+
+  a
+    color: $black
+    font-weight: 400
+
+  p.involvement
+    padding-bottom: 20px
+
+  div.projects-row
+    display: flex
+    margin-bottom: 20px
+
+    a
+      flex: 1
+      text-decoration: none
+
+  @media only screen and (max-device-width: 500px)
+    div.project-row
+      display: block
+
+      header
+        margin-top: 20px
+
+  article
+    header
+      color: $black
+      margin-bottom: 10px
+      font:
+        weight: 700
+        size: 24px
+
+      span
+        border-bottom: 2px solid $black
+
+  div.github-promo
+    clear: both
+
+    a
+      text-decoration: none
+      border-bottom: 2px solid $black
+
+section#contact
+  background-color: $black
+  color: #fff
+  text-align: center
+
+  a
+    text-decoration: none
+    font-weight: 300
+    border-bottom: 2px solid #fff
+    color: #fff
+
+  p
+    margin-bottom: 10px
+
+    &:last-child
+      margin: 0
+      border-bottom: 2px solid $black
