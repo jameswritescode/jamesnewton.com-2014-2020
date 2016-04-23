@@ -1,0 +1,227 @@
+// Background & Terminal styling inspired by https://mjml.io/
+
+$white: #F8F8F2
+
+*
+  margin: 0
+  padding: 0
+
+html
+  height: 100%
+
+body
+  height: 100%
+  background-color: #F46D4C
+  background: linear-gradient(180deg, #F46D4C, #E4505D) fixed
+  background-repeat: no-repeat
+  background-attachment: fixed
+  margin: 0 auto
+  font-family: Lato, sans-serif
+  color: $white
+
+li
+  list-style-type: none
+  font-weight: 200
+
+p
+  font-weight: 200
+
+.spacer
+  height: 60px
+
+.container
+  margin: 0 auto 60px auto
+  max-width: 1030px
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, .3), 0 0 0 1px #000
+  border-radius: 5px
+  background-color: #22242A
+
+div#header
+  border-radius: 5px 5px 0 0
+  background-color: #2D2D33
+  border-bottom: 1px solid rgba(0, 0, 0, .1)
+  padding: 16px 10px
+  text-align: center
+
+  div
+    color: #4F4F4F
+    text-shadow: 0 -1px 0 black
+    display: inline
+
+    &.middle
+      margin: 0 5px
+      float: left
+
+      span
+        &.pellet
+          display: inline-block
+          background-color: #4F4F4F
+          height: 10px
+          width: 10px
+          border-radius: 5px
+          cursor: pointer
+          transition: background-color .5s ease-in-out
+
+        &.pellet-0:hover
+          background-color: #E52A22
+
+        &.pellet-1:hover
+          background-color: #FAB100
+
+        &.pellet-2:hover
+          background-color: #289D3E
+
+    &.statusline
+      display: inline
+
+div.cmd
+  color: #4F4F4F
+  text-shadow: 0 -1px 0 black
+  margin-left: 5px
+  padding-left: 20px
+  display: block
+
+  span.cursor
+    font-weight: 500
+    text-decoration: blink
+    animation: blink .5s alternate infinite
+
+.typing
+  padding-bottom: 30px
+
+@keyframes blink
+  from
+    opacity: 1.0
+
+  to
+    opacity: 0.0
+
+section
+  margin: 30px 0
+  padding: 0 20px
+
+section#about
+  header
+    margin: 0 0 0 50px
+    color: #a6353c
+    font-size: 50px
+
+    span
+      font-family: athelas
+      font-weight: 700
+
+  p
+    font-size: 20px
+    width: 800px
+    margin: 40px auto 0 auto
+    border-left: 5px solid $white
+    padding-left: 8px
+
+section#skills
+  .languages
+    display: flex
+
+  .language
+    font-weight: 700
+    flex: 1
+
+  .lang-ruby
+    color: #842220
+  .lang-python
+    color: #4587B2
+  .lang-js
+    color: #F3E374
+  .lang-node
+    color: #6CAF5B
+  .lang-php
+    color: #6273A4
+  .tools
+    color: #F14E32
+
+section#history
+  .job
+    margin-top: 30px
+
+  .c-cs
+    color: #21ABC7
+
+  .c-chargify
+    color: #2DC833
+
+  .c-cysy
+    color: $white
+
+  .c-wp
+    color: #BCC2C7
+
+  .c-gitlab
+    color: #E14320
+
+  .info-me
+    display: flex
+    margin-bottom: 10px
+
+    .company, .time
+      flex: 1
+
+    .company
+      font-size: 20px
+      font-weight: 700
+      font-size: 24px
+
+    .time
+      text-align: right
+      font-size: 16px
+      font-weight: 200
+
+  .info-position
+    width: 100%
+    display: flex
+
+    p
+      margin-bottom: 10px
+
+    .description
+      flex-basis: 850px
+      padding-right: 30px
+
+      .title
+        margin-bottom: 10px
+        font-size: 18px
+        font-weight: 700
+
+    .tech
+      flex-basis: 150px
+
+      span
+        font-weight: 500
+
+section#social
+  a
+    display: block
+    color: $white
+    text-decoration: none
+    margin-top: 30px
+    border-radius: 5px
+    border: 1px solid $white
+    max-width: 100%
+    padding: 10px
+
+  div.link
+    display: flex
+
+    div.name, div.username
+      flex: 1
+
+    div.username
+      text-align: right
+      font-weight: 200
+
+    div.name
+      font-size: 20px
+      font-weight: 700
+      margin-bottom: 10px
+
+section#contact
+  p
+    margin-bottom: 10px

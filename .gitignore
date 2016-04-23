@@ -3,7 +3,8 @@ tmp/*
 config.yml
 vendor
 .bundle
-public
 .sass-cache
+
+public/*
 !public/javascripts
 !public/stylesheets
