@@ -1,0 +1,224 @@
+!!!
+%html
+  %head
+    %meta{ charset: 'utf-8' }
+    %title James Newton - Resume
+    %meta{ content: 'IE=edge,chrome=1', 'http-equiv' => 'X-UA-Compatible' }
+    %meta{ content: 'width=device-width, initial-scale=1.0', name: :viewport }
+    %link{ href: '/stylesheets/resume.css', media: :screen, rel: :stylesheet, type: 'text/css' }
+    %script{ src: 'http://use.typekit.net/ovs0cxj.js' }
+    :javascript
+      try{Typekit.load();}catch(e){}
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-43832701-1', 'jamesnewton.com');
+      ga('send', 'pageview');
+
+  %body
+    // Dirty but I can't figure out how to deal with the scroll caused by the
+    // background setup otherwise.
+    .spacer
+
+    .container
+      #header
+        - 3.times do |i|
+          .middle
+            %a{ href: '/' }
+              %span{ class: "pellet pellet-#{i}" }
+
+        .statusline
+          %span hello@jamesnewton.com: ~
+
+      %section#about
+        %header
+          Hi, I'm
+          = succeed '.' do
+            %span James Newton
+
+        %p I'm a software developer in the Orlando, FL area. I love working with people to solve problems. Learning is a passion and I enjoy taking on projects in new languages and frameworks to build my stack.
+
+      .cmd
+        %span ~$ mail -s "hey there" hello@jamesnewton.com
+
+      %section#contact
+
+        %p I'm looking for work, so if you'd like to contact me I'd love to hear from you! Just shoot an email to hello@jamesnewton.com and I'll be all over it.
+
+      .cmd
+        %span ~$ cat skills.txt
+
+      %section#skills
+        .languages
+          .language
+            %span.lang-ruby Ruby
+            %ul
+              %li Ruby on Rails
+              %li Sinatra
+              %li Gem
+
+          .language
+            %span.lang-python Python
+            %ul
+              %li Flask
+
+          .language
+            %span.lang-js JavaScript
+            %ul
+              %li Angular.js
+              %li React
+              %li jQuery
+
+          .language
+            %span.lang-node Node
+            %ul
+              %li NPM
+              %li Express
+
+          .language
+            %span.lang-php PHP
+            %ul
+              %li Code Igniter
+
+          .language
+            %span.tools Tools
+            %ul
+              %li Vim
+              %li Git, Mercurial
+              %li Linux (DevOps)
+
+      .cmd
+        %span ~$ vim work.md
+
+      %section#history
+        %p These are where I've been and the technologies I worked with while I was there.
+
+        .job
+          .info-me
+            .company.c-cs
+              %span Code School
+            .time
+              %span February 2014 &mdash; April 2016
+
+          .info-position
+            .description
+              .title
+                %span Software Engineer II
+              %p Code School is an interactive learning platform based in Orlando, FL that aims to make learning to code easier right in your browser. It was acquired by Pluralsight during my time there.
+
+              %p I worked on challenge implementation in courses while at Code School, like Surviving APIs with Rails, Staying Sharp with Angular.js, and more. I also wrote the Python code executor that powers Try Python and Flying Through Python. I also contributed on the backend and Angular.js code for JavaScript.com's Try JavaScript.
+
+            .tech
+              %span Technologies
+              %p Ruby, Rails, JavaScript, Angular.js, jQuery, Node, Express, Python.
+
+        .job
+          .info-me
+            .company.c-chargify
+              %span Chargify
+            .time
+              %span August 2012 &mdash; January 2014
+
+          .info-position
+            .description
+              .title
+                %span Tech Support Developer
+              %p Chargify is a recurring payment platform with support for many different payment providers and a remote first team.
+
+              %p
+                I was the first Tier 2 support hire and was responsible for helping customers with platform issues, and helping developers. In my spare time I would work on payment gateway integration and wrote the original implementation of the eWay gateway that it used with ActiveMerchant<abbr title='Private. Not the version that made it into the official ActiveMerchant'>*</abbr>.
+
+            .tech
+              %span Technologies
+              %p Ruby, Rails, Gem, JavaScript, jQuery.
+
+        .job
+          .info-me
+            .company.c-cysy
+              %span CYber SYtes
+            .time
+              %span January 2011 &mdash; August 2012
+
+          .info-position
+            .description
+              .title
+                %span Support
+              %p CYber SYtes is a local web design shop that started during the .com boom located in my home town, Panama City Beach, FL.
+
+              %p I worked with customers on various issues ranging between email setup to debugging site issues and programming tasks.
+
+            .tech
+              %span Technologies
+              %p PHP, Perl, WordPress.
+
+        .job
+          .info-me
+            .company.c-wp
+              %span WhatPulse
+
+          .info-position
+            .description
+              .title
+                %span Volunteer
+              %p I've been contributing to WhatPulse for several years since I first started learning how to code. Since then I've contributed to the website alongside consulting on various parts.
+
+            .tech
+              %span Technologies
+              %p PHP, Custom framework.
+
+        .job
+          .info-me
+            .company.c-gitlab
+              %span GitLab
+
+          .info-position
+            .description
+              .title
+                %span Volunteer
+
+              %p I'm part of the core team of volunteers for GitLab. I've made a couple of contributions, but I was recognized for supporting users in the #gitlab IRC channel on freenode for the past few years.
+
+            .tech
+              %span Technologies
+              %p Ruby, Rails.
+
+      .cmd
+        %span ~$ lynx
+
+      %section#social
+
+        %p If you want to learn more about me, you can check me out on these platforms.
+
+        %a{ href: 'https://github.com/jameswritescode' }
+          .link
+            .name
+              %span GitHub
+            .username
+              %span @jameswritescode
+
+          %p You can find my public projects here.
+
+        %a{ href: 'https://twitter.com/jameswritescode' }
+          .link
+            .name
+              %span Twitter
+            .username
+              %span @jameswritescode
+
+          %p I like to tweet. Mostly about my cat.
+
+        %a{ href: 'https://www.linkedin.com/in/jameswritescode' }
+          .link
+            .name
+              %span LinkedIn
+            .username
+              %span /in/jameswritescode
+
+          %p You'll find a lot of the information listed here, and that I've been endorsed for my skill in emoji.
+
+      .cmd.typing
+        %span ~$
+        %span.cursor= "|"

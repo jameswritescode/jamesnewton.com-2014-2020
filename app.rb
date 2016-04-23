@@ -37,3 +37,7 @@ get '/' do
 
   haml :index, locals: { post: post, content: content }
 end
+
+get '/resume' do
+  haml :resume
+end
