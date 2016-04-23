@@ -171,9 +171,6 @@ section#skills
     color: #F14E32
 
 section#history
-  .job
-    margin-top: 30px
-
   .c-cs
     color: #21ABC7
 
@@ -189,55 +186,55 @@ section#history
   .c-gitlab
     color: #E14320
 
-  .info-me
+  .job
+    margin-top: 30px
     display: flex
+    flex-flow: wrap row
+    align-content: flex-end
+    jusify-content: space-around
+    align-items: center
+
+  margin-bottom: 10px
+
+  .company, .time, .tech, .description
+    flex: 1 auto
+
+  .company, .description
+    flex-basis: 700px
+
+  .time, .tech
+    flex-basis: 120px
+
+  .company
+    font-size: 20px
+    font-weight: 700
+    font-size: 24px
+
+  .time
+    font-size: 16px
+    font-weight: 200
+
+  p
     margin-bottom: 10px
 
-    .company, .time
-      flex: 1
-
-    .company
-      font-size: 20px
-      font-weight: 700
-      font-size: 24px
-
-    .time
-      text-align: right
-      font-size: 16px
-      font-weight: 200
-
-  .info-position
-    width: 100%
-    display: flex
-
-    p
-      margin-bottom: 10px
-
-    .description
-      flex-basis: 850px
+  .description
+    .pad
       padding-right: 30px
 
-      .title
-        margin-bottom: 10px
-        font-size: 18px
-        font-weight: 700
+    .title
+      margin-bottom: 10px
+      font-size: 18px
+      font-weight: 700
 
-    .tech
-      flex-basis: 150px
-
-      span
-        font-weight: 500
+  .tech
+    span
+      font-weight: 500
 
   @media only screen and (min-device-width : 375px) and (max-device-width : 667px)
-    .info-me
-      .time
-        text-align: left
-
-    .info-position, .info-me
-      flex-direction: column
-
-      .description, .tech
-        flex-basis: auto
+    .job
+      .description
+        .pad
+          padding-right: 0
 
 section#social
   a
