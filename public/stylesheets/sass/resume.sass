@@ -95,6 +95,10 @@ div.cmd
   padding-left: 20px
   display: block
 
+  a
+    color: inherit
+    text-decoration: none
+
   span.cursor
     font-weight: 500
     text-decoration: blink
@@ -199,22 +203,21 @@ section#skills
     color: #F14E32
 
 section#history
+  margin-bottom: 10px
+
   .job
     margin-top: 30px
-    flex-flow: wrap row
-    align-content: flex-end
-    jusify-content: space-around
-    align-items: flex-start
 
     &:last-child
       margin-bottom: 25px
 
-  margin-bottom: 10px
+  .pad
+    padding-right: 30px
 
-  .company, .description
+  .info
     flex-basis: 700px
 
-  .time, .tech
+  .tech
     flex-basis: 120px
 
   .company, .title
@@ -227,12 +230,10 @@ section#history
   .time
     font-size: 16px
     font-weight: 100
+    color: $color
 
   p
     margin-bottom: 10px
-
-  .pad
-    padding-right: 30px
 
   .description
     .title
@@ -242,7 +243,8 @@ section#history
 
   .tech
     span
-      font-weight: 500
+      font-weight: 100
+      color: $red
 
     ul
       list-style-position: inside
@@ -262,13 +264,6 @@ section#history
         &:last-child:after
           content: '.'
 
-
-  @media only screen and (min-device-width : 375px) and (max-device-width : 667px)
-    .job
-      .description
-        .pad
-          padding-right: 0
-
 section#social
   a
     display: block
@@ -281,6 +276,6 @@ section#social
 
     div.name
       font-size: 20px
-      font-weight: 700
+      font-weight: 100
       margin-bottom: 10px
       color: #EA5B57
