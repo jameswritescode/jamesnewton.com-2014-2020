@@ -132,6 +132,10 @@ section#about
     &:active
       opacity: 0.5
 
+    &:hover
+      background-color: saturate($red, 10)
+      color: saturate($term-background, 10)
+
   @media only screen and (min-device-width : 375px) and (max-device-width : 667px)
     a
       width: auto
@@ -256,13 +260,24 @@ section#history
 section#social
   div.link
     margin-top: 30px
+    font-weight: 100
+
+  span.name
+    font-size: 20px
+    color: $red
 
   a
+    display: block
     text-decoration: none
     max-width: 100%
-    font-size: 20px
-    font-weight: 100
-    color: $red
+    color: $color
+
+    &:hover
+      p
+        color: white
+
+      span
+        color: saturate($red, 10)
 
 section#contact
   color: white
