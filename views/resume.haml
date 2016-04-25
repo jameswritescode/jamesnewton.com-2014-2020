@@ -196,39 +196,23 @@
         %span ~$ lynx
 
       %section#social
-        %a{ href: 'https://github.com/jameswritescode' }
-          .link.flex
-            .name.box
-              %span GitHub
+        .link
+          %a{ href: 'https://github.com/jameswritescode' } GitHub
 
           %p See my public project activity.
 
-        %a{ href: 'https://twitter.com/jameswritescode' }
-          .link.flex
-            .name.box
-              %span Twitter
+        .link
+          %a{ href: 'https://twitter.com/jameswritescode' } Twitter
 
           %p You should follow me if you like tweets about cats.
 
-        %a{ href: 'https://www.linkedin.com/in/jameswritescode' }
-          .link.flex
-            .name.box
-              %span LinkedIn
+        .link
+          %a{ href: 'https://www.linkedin.com/in/jameswritescode' } LinkedIn
 
           %p I am highly endorsed for my skills in emoji.
-
-      .cmd
-        %span
-          \~$ mail -s "hey there"
-          %a{ href: 'mailto:hello@jamesnewton.com?subject=Work opportunity' } hello@jamesnewton.com
 
       %section#contact
         %p
           Let&rsquo;s talk about how I can contribute to your development team.
 
-          = succeed '.' do
-            %a{ href: 'mailto:hello@jamesnewton.com?subject=Work opportunity'} Email me today
-
-      .cmd.typing
-        %span ~$
-        %span.cursor= "|"
+          %a{ href: 'mailto:hello@jamesnewton.com?subject=Work opportunity'} Email me today.
