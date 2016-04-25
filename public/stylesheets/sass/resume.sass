@@ -1,6 +1,7 @@
 // Background & Terminal styling inspired by https://mjml.io/
 
 $color: #F8F8F2
+$red: #F46D4C
 $background: linear-gradient(180deg, #F46D4C, #E4505D) fixed
 $term-header: #2D2D33
 $term-background: #22242A
@@ -24,7 +25,6 @@ body
   color: $color
 
 li
-  list-style-type: none
   font-weight: 200
 
 p
@@ -84,6 +84,10 @@ div#header
     width: 200px
     text-align: center
 
+    a
+      color: inherit
+      text-decoration: none
+
 div.cmd
   color: #4F4F4F
   padding-left: 20px
@@ -111,7 +115,7 @@ section
 section#about
   header
     text-align: center
-    color: #A6353C
+    color: $red
     font-size: 50px
 
     @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait)
@@ -125,9 +129,32 @@ section#about
     max-width: 800px
     margin: 30px auto 0 auto
 
+  a
+    display: block
+    margin: 30px auto 0 auto
+    width: 200px
+    text-align: center
+    padding: 20px 0
+    background-color: #ED5D55
+    text-decoration: none
+    border-radius: 5px
+    font-weight: 700
+    font-size: 18px
+    color: $term-background
+
+    &:active
+      opacity: 0.5
+
+  @media only screen and (min-device-width : 375px) and (max-device-width : 667px)
+    a
+      width: auto
+
 section#skills
   .language
     font-weight: 700
+
+  li
+    list-style-type: none
 
   @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait)
     .languages
@@ -224,6 +251,25 @@ section#history
     span
       font-weight: 500
 
+    ul
+      list-style-position: inside
+
+    @media only screen and (min-device-width : 375px) and (max-device-width : 667px)
+      ul
+        list-style-position: none
+
+      li
+        list-style-type: none
+        float: left
+        padding-right: 5px
+
+        &:after
+          content: ','
+
+        &:last-child:after
+          content: '.'
+
+
   @media only screen and (min-device-width : 375px) and (max-device-width : 667px)
     .job
       .description
@@ -240,40 +286,8 @@ section#social
   div.link
     margin-top: 30px
 
-    div.username
-      text-align: right
-      font-weight: 200
-
     div.name
       font-size: 20px
       font-weight: 700
       margin-bottom: 10px
-
-      span
-        border-bottom: 3px solid $color
-
-section#contact
-  p
-    margin-bottom: 30px
-    text-align: center
-    font-size: 18px
-
-  a
-    display: block
-    margin: 0 auto
-    width: 200px
-    text-align: center
-    padding: 20px 0
-    background-color: #A6353C
-    text-decoration: none
-    border-radius: 5px
-    font-weight: 700
-    font-size: 18px
-    color: $term-background
-
-    &:active
-      opacity: 0.5
-
-  @media only screen and (min-device-width : 375px) and (max-device-width : 667px)
-    a
-      width: auto
+      color: #EA5B57

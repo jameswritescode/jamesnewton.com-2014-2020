@@ -31,7 +31,8 @@
               %span{ class: "pellet pellet-#{i}" }
 
         .statusline
-          %span hello@jamesnewton.com: ~
+          %span
+            %a{ href: 'mailto:hello@jamesnewton.com' } hello@jamesnewton.com: ~
 
       %section#about
         %header
@@ -39,13 +40,9 @@
           = succeed '.' do
             %span James Newton
 
-        %p I'm a software developer in the Orlando, FL area. I love working with people to solve problems. Learning is a passion and I enjoy taking on projects in new languages and frameworks to build my stack.
+        %p I'm a software developer in Orlando, FL, who loves working with people to solve problems. Learning is my passion, and I enjoy taking on projects in new languages and frameworks to build my stack.
 
-      .cmd
-        %span ~$ mail -s "hey there" hello@jamesnewton.com
-
-      %section#contact
-        %p I'm looking for my next adventure, so if you'd like to contact me I'd love to hear from you!
+        %p If you’re looking to fill a developer role, email me today.
 
         %a{ href: 'emailto:hello@jamesnewton.com?subject=Work opportunity' } Contact me
 
@@ -96,8 +93,6 @@
         %span ~$ vim work.md
 
       %section#history
-        %p These are where I've been and the technologies I worked with while I was there.
-
         .job.flex
           .company.box.c-cs
             %span Code School
@@ -109,13 +104,18 @@
               .title
                 %span Software Engineer II
 
-              %p Code School is an interactive learning platform based in Orlando, FL that aims to make learning to code easier right in your browser. It was acquired by Pluralsight during my time there.
+              %p Code School, recently acquired by Pluralsight, is an interactive learning platform based in Orlando, FL.
 
-              %p I worked on challenge implementation for courses like Surviving APIs with Rails, Staying Sharp with Angular.js, and more. I also wrote the Python code executor that powers Try Python and Flying Through Python and contributed on the backend and Angular.js code for JavaScript.com's Try JavaScript.
+              %p I implemented challenges for courses like Surviving APIs with Rails, Staying Sharp with Angular.js, and more. In addition, I wrote the Python code executor that powers Try Python and Flying Through Python, and contributed to the backend and Angular.js code for JavaScript.com's Try JavaScript.
 
           .tech.box
             %span Technologies
-            %p Ruby, Rails, JavaScript, Angular.js, jQuery, Node, Express, Python.
+            %ul
+              %li Ruby, Rails
+              %li JavaScript, jQuery
+              %li Angular.js
+              %li Node, Express
+              %li Python
 
         .job.flex
           .company.box.c-chargify
@@ -128,13 +128,13 @@
               .title
                 %span Tech Support Developer
 
-              %p Chargify is a recurring payment platform with support for many different payment providers and a remote first team.
-
-              %p I was the first Tier 2 support hire and was responsible for helping customers with platform issues, and helping developers. In my spare time I would work on payment gateway integration and wrote the original implementation of the eWay gateway that it used with ActiveMerchant<abbr title='Private. Not the version that made it into the official ActiveMerchant'>*</abbr>.
+              %p As the first hire of Tier 2 support, I was responsible for helping customers and developers with platform issues at Chargify, a recurring payment system. I also developed features for the payment gateway integration, as well as the original implementation of the eWay gateway the the company used with ActiveMerchat<abbr title='Private. Not the version that made it into the official ActiveMerchant'>*</abbr>.
 
           .tech.box
             %span Technologies
-            %p Ruby, Rails, Gem, JavaScript, jQuery.
+            %ul
+              %li Ruby, Rails, Gem
+              %li JavaScript, jQuery
 
         .job.flex
           .company.box.c-cysy
@@ -147,77 +147,75 @@
               .title
                 %span Support
 
-              %p CYber SYtes is a web design shop that started during the .com boom located in my home town, Panama City Beach, FL.
-
-              %p I worked with customers on various issues ranging between email setup to debugging site issues and programming tasks.
+              %p I was responsible for various programming debugging, and a wide range of support tasks while working in the support department at this small website shop.
 
           .tech.box
             %span Technologies
-            %p PHP, Perl, WordPress.
+            %ul
+              %li PHP, WordPress
+              %li Perl
 
         .job.flex
           .company.box.c-wp
             %span WhatPulse
+          .time.box
+            %span 2011 &mdash; Present
 
           .description.box
             .pad
               .title
-                %span Volunteer
+                %span Contributor
 
-              %p I've been contributing to WhatPulse for several years since I first started learning how to code. Since then I've contributed to the website alongside consulting on various parts.
+              %p As a fan of data-driven software, I've contributed to WhatPulse for several years, in the form of backend work, JavaScript, and consulting.
 
           .tech.box
             %span Technologies
-            %p PHP, Custom framework.
+            %ul
+              %li JavaScript, jQuery
+              %li PHP, Custom framework
 
         .job.flex
           .company.box.c-gitlab
             %span GitLab
+          .time.box
+            %span 2015 &mdash; Present
 
           .description.box
             .pad
               .title
-                %span Volunteer
+                %span Contributor
 
-              %p I'm part of the core team of volunteers for GitLab. I've made a couple of contributions, but I was recognized for supporting users in the #gitlab IRC channel on freenode for the past few years.
+              %p I'm a member of the core team of volunteers for GitLab, having contributed and been recognized for supporting users in the #gitlab IRC channel for the past several years.
 
           .tech.box
             %span Technologies
-            %p Ruby, Rails.
+            %ul
+              %li Ruby, Rails
 
       .cmd
         %span ~$ lynx
 
       %section#social
-
-        %p If you want to learn more about me, you can check me out on these platforms.
-
         %a{ href: 'https://github.com/jameswritescode' }
           .link.flex
             .name.box
               %span GitHub
-            .username.box
-              %span @jameswritescode
 
-          %p You can find my public projects here.
+          %p See my public project activity.
 
         %a{ href: 'https://twitter.com/jameswritescode' }
           .link.flex
             .name.box
               %span Twitter
-            .username.box
-              %span @jameswritescode
 
-          %p I like to tweet. Mostly about my cat.
+          %p You should follow me if you like tweets about cats.
 
         %a{ href: 'https://www.linkedin.com/in/jameswritescode' }
           .link.flex
             .name.box
               %span LinkedIn
-            .username.box
-              %span /in/jameswritescode
 
-          %p You'll find a lot of the information listed here, and that I've been endorsed for my skill in emoji.
+          %p I am highly endorsed for my skills in emoji.
 
       .cmd.typing
         %span ~$
