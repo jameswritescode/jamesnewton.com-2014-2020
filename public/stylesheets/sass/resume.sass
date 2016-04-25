@@ -31,6 +31,12 @@ p
   font-weight: 200
   letter-spacing: 0em
 
+div.flex
+  display: flex
+
+div.box
+  flex: 1
+
 .spacer
   height: 60px
 
@@ -105,12 +111,11 @@ section
 section#about
   header
     text-align: center
-    color: #a6353c
+    color: #A6353C
     font-size: 50px
 
     @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait)
-      font-size: 35px
-      margin: 0
+      font-size: 30px
 
     span
       font-weight: 700
@@ -118,16 +123,11 @@ section#about
   p
     font-size: 20px
     max-width: 800px
-    margin: 40px auto 0 auto
-    padding-left: 8px
+    margin: 30px auto 0 auto
 
 section#skills
-  .languages
-    display: flex
-
   .language
     font-weight: 700
-    flex: 1
 
   @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait)
     .languages
@@ -150,7 +150,7 @@ section#skills
         content: ','
 
       &:last-child:after
-        content: ''
+        content: '.'
 
   .lang-ruby
     color: #842220
@@ -183,7 +183,6 @@ section#history
 
   .job
     margin-top: 30px
-    display: flex
     flex-flow: wrap row
     align-content: flex-end
     jusify-content: space-around
@@ -193,9 +192,6 @@ section#history
       margin-bottom: 25px
 
   margin-bottom: 10px
-
-  .company, .time, .tech, .description
-    flex: 1 auto
 
   .company, .description
     flex-basis: 700px
@@ -242,11 +238,7 @@ section#social
     max-width: 100%
 
   div.link
-    display: flex
     margin-top: 30px
-
-    div.name, div.username
-      flex: 1
 
     div.username
       text-align: right
@@ -262,4 +254,26 @@ section#social
 
 section#contact
   p
-    margin-bottom: 10px
+    margin-bottom: 30px
+    text-align: center
+    font-size: 18px
+
+  a
+    display: block
+    margin: 0 auto
+    width: 200px
+    text-align: center
+    padding: 20px 0
+    background-color: #A6353C
+    text-decoration: none
+    border-radius: 5px
+    font-weight: 700
+    font-size: 18px
+    color: $term-background
+
+    &:active
+      opacity: 0.5
+
+  @media only screen and (min-device-width : 375px) and (max-device-width : 667px)
+    a
+      width: auto

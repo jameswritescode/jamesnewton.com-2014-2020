@@ -45,45 +45,46 @@
         %span ~$ mail -s "hey there" hello@jamesnewton.com
 
       %section#contact
+        %p I'm looking for my next adventure, so if you'd like to contact me I'd love to hear from you!
 
-        %p I'm looking for my next adventure, so if you'd like to contact me I'd love to hear from you! Just shoot an email to hello@jamesnewton.com and I'll be all over it.
+        %a{ href: 'emailto:hello@jamesnewton.com?subject=Work opportunity' } Contact me
 
       .cmd
         %span ~$ cat skills.txt
 
       %section#skills
-        .languages
-          .language
+        .languages.flex
+          .language.box
             %span.lang-ruby Ruby
             %ul
               %li Ruby on Rails
               %li Sinatra
               %li Gem
 
-          .language
+          .language.box
             %span.lang-python Python
             %ul
               %li Flask
 
-          .language
+          .language.box
             %span.lang-js JavaScript
             %ul
               %li Angular.js
               %li React
               %li jQuery
 
-          .language
+          .language.box
             %span.lang-node Node
             %ul
               %li NPM
               %li Express
 
-          .language
+          .language.box
             %span.lang-php PHP
             %ul
               %li Code Igniter
 
-          .language
+          .language.box
             %span.tools Tools
             %ul
               %li Vim
@@ -97,13 +98,13 @@
       %section#history
         %p These are where I've been and the technologies I worked with while I was there.
 
-        .job
-          .company.c-cs
+        .job.flex
+          .company.box.c-cs
             %span Code School
-          .time
+          .time.box
             %span 2014 &mdash; 2016
 
-          .description
+          .description.box
             .pad
               .title
                 %span Software Engineer II
@@ -112,17 +113,17 @@
 
               %p I worked on challenge implementation for courses like Surviving APIs with Rails, Staying Sharp with Angular.js, and more. I also wrote the Python code executor that powers Try Python and Flying Through Python and contributed on the backend and Angular.js code for JavaScript.com's Try JavaScript.
 
-          .tech
+          .tech.box
             %span Technologies
             %p Ruby, Rails, JavaScript, Angular.js, jQuery, Node, Express, Python.
 
-        .job
-          .company.c-chargify
+        .job.flex
+          .company.box.c-chargify
             %span Chargify
-          .time
+          .time.box
             %span 2012 &mdash; 2014
 
-          .description
+          .description.box
             .pad
               .title
                 %span Tech Support Developer
@@ -131,17 +132,17 @@
 
               %p I was the first Tier 2 support hire and was responsible for helping customers with platform issues, and helping developers. In my spare time I would work on payment gateway integration and wrote the original implementation of the eWay gateway that it used with ActiveMerchant<abbr title='Private. Not the version that made it into the official ActiveMerchant'>*</abbr>.
 
-          .tech
+          .tech.box
             %span Technologies
             %p Ruby, Rails, Gem, JavaScript, jQuery.
 
-        .job
-          .company.c-cysy
+        .job.flex
+          .company.box.c-cysy
             %span CYber SYtes
-          .time
+          .time.box
             %span 2011 &mdash; 2012
 
-          .description
+          .description.box
             .pad
               .title
                 %span Support
@@ -150,37 +151,37 @@
 
               %p I worked with customers on various issues ranging between email setup to debugging site issues and programming tasks.
 
-          .tech
+          .tech.box
             %span Technologies
             %p PHP, Perl, WordPress.
 
-        .job
-          .company.c-wp
+        .job.flex
+          .company.box.c-wp
             %span WhatPulse
 
-          .description
+          .description.box
             .pad
               .title
                 %span Volunteer
 
               %p I've been contributing to WhatPulse for several years since I first started learning how to code. Since then I've contributed to the website alongside consulting on various parts.
 
-          .tech
+          .tech.box
             %span Technologies
             %p PHP, Custom framework.
 
-        .job
-          .company.c-gitlab
+        .job.flex
+          .company.box.c-gitlab
             %span GitLab
 
-          .description
+          .description.box
             .pad
               .title
                 %span Volunteer
 
               %p I'm part of the core team of volunteers for GitLab. I've made a couple of contributions, but I was recognized for supporting users in the #gitlab IRC channel on freenode for the past few years.
 
-          .tech
+          .tech.box
             %span Technologies
             %p Ruby, Rails.
 
@@ -192,28 +193,28 @@
         %p If you want to learn more about me, you can check me out on these platforms.
 
         %a{ href: 'https://github.com/jameswritescode' }
-          .link
-            .name
+          .link.flex
+            .name.box
               %span GitHub
-            .username
+            .username.box
               %span @jameswritescode
 
           %p You can find my public projects here.
 
         %a{ href: 'https://twitter.com/jameswritescode' }
-          .link
-            .name
+          .link.flex
+            .name.box
               %span Twitter
-            .username
+            .username.box
               %span @jameswritescode
 
           %p I like to tweet. Mostly about my cat.
 
         %a{ href: 'https://www.linkedin.com/in/jameswritescode' }
-          .link
-            .name
+          .link.flex
+            .name.box
               %span LinkedIn
-            .username
+            .username.box
               %span /in/jameswritescode
 
           %p You'll find a lot of the information listed here, and that I've been endorsed for my skill in emoji.
