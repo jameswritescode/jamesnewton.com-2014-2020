@@ -46,41 +46,40 @@ div#header
   background-color: $term-header
   border-bottom: 1px solid rgba(0, 0, 0, .1)
   padding: 16px 10px
-  text-align: center
+  color: #4F4F4F
+  position: relative
 
-  div
-    color: #4F4F4F
+  div.middle
     display: inline
+    margin: 0 5px
+    float: left
 
-    &.middle
-      margin: 0 5px
-      float: left
+    span
+      &.pellet
+        display: inline-block
+        background-color: #4F4F4F
+        height: 10px
+        width: 10px
+        border-radius: 5px
+        cursor: pointer
+        transition: background-color .5s ease-in-out
 
-      span
-        &.pellet
-          display: inline-block
-          background-color: #4F4F4F
-          height: 10px
-          width: 10px
-          border-radius: 5px
-          cursor: pointer
-          transition: background-color .5s ease-in-out
+      &.pellet-0:hover
+        background-color: #E52A22
 
-        &.pellet-0:hover
-          background-color: #E52A22
+      &.pellet-1:hover
+        background-color: #FAB100
 
-        &.pellet-1:hover
-          background-color: #FAB100
+      &.pellet-2:hover
+        background-color: #289D3E
 
-        &.pellet-2:hover
-          background-color: #289D3E
-
-    &.statusline
-      display: inline
+  div.statusline
+    margin: 0 auto
+    width: 200px
+    text-align: center
 
 div.cmd
   color: #4F4F4F
-  margin-left: 5px
   padding-left: 20px
   display: block
 
@@ -190,6 +189,9 @@ section#history
     jusify-content: space-around
     align-items: flex-start
 
+    &:last-child
+      margin-bottom: 25px
+
   margin-bottom: 10px
 
   .company, .time, .tech, .description
@@ -237,14 +239,11 @@ section#social
     display: block
     color: $color
     text-decoration: none
-    margin-top: 30px
-    border-radius: 5px
-    border: 1px solid $color
     max-width: 100%
-    padding: 10px
 
   div.link
     display: flex
+    margin-top: 30px
 
     div.name, div.username
       flex: 1
@@ -257,6 +256,9 @@ section#social
       font-size: 20px
       font-weight: 700
       margin-bottom: 10px
+
+      span
+        border-bottom: 3px solid $color
 
 section#contact
   p
