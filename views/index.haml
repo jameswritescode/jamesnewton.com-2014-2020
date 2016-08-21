@@ -93,5 +93,10 @@
           %p That's me!
 
           %p
-            If you'd like to reach out, email me at
+            If you'd like to learn more about me, check out my
+            = succeed ',' do
+              %a{ href: '/resume'} resume
+
+          %p
+            or reach out to me at
             %a{ href: 'mailto:hello@jamesnewton.com' } hello@jamesnewton.com
