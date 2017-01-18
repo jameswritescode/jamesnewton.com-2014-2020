@@ -178,13 +178,13 @@ section#skills
 
   .lang-ruby
     color: #CB3A19
-  .lang-python
-    color: #4587B2
   .lang-js
     color: #F3E374
   .lang-node
     color: #6CAF5B
-  .lang-php
+  .learning
+    color: #4587B2
+  .other
     color: #6273A4
   .tools
     color: #D28532
@@ -236,6 +236,11 @@ section#history
     ul
       list-style-position: inside
 
+      span
+        color: $color
+        position: relative
+        left: -20px
+
   @media only screen and (min-device-width: 414px) and (max-device-width: 736px), only screen and (min-device-width: 375px) and (max-device-width: 667px)
     .job
       flex-direction: column
@@ -246,19 +251,29 @@ section#history
     .pad
       padding: 0
 
-    ul
-      list-style-position: none
+    .tech
+      ul
+        span
+          position: static
+          width: 0
 
     li
       list-style-type: none
       float: left
-      padding-right: 5px
+      // padding-right: 5px
+      margin: 0
+      padding: 0
 
-      &:after
-        content: ','
+      &:before
+        content: ' ,'
 
-      &:last-child:after
-        content: '.'
+      &:first-child:before
+        content: ''
+
+      &:last-child
+        span
+          &:after
+            content: '.'
 
 section#social
   div.link
