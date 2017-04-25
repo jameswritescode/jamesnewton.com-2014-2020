@@ -1,25 +1,18 @@
 $(function() {
   $('.js-typed').typed({
     strings:   ['a cat owner', 'a wantrepreneur', 'a tamagotchi', 'a musician',
-                'a habitual line stepper', 'a drummer', 'an emoji enthusiast',
-                'a software developer'],
+                'a habitual line stepper', 'an emoji enthusiast',
+                'a software engineer'],
     backDelay: 1000
   });
 });
 
+// TODO
 // TIP: B A
 var secret = '38384040373937396665',
     input  = '',
-    konamis = [greatBattleOfCat, justDOIT],
+    konamis = [],
     timer;
-
-function greatBattleOfCat() {
-  alert('Nyan Cat vs. Tac Nayn');
-}
-
-function justDOIT() {
-  alert('JUST DO IT');
-}
 
 function checkInput() {
   if (input.indexOf(secret) > -1) {
